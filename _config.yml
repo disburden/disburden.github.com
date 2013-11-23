@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://disburden.github.io
+title: 月夜录
+subtitle: 凄风苦雨夜归人
+author: disburden
 simple_search: http://google.com/search
 description:
 
@@ -69,8 +69,6 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
-twitter_tweet_button: true
 
 # Google +1
 google_plus_one: false
