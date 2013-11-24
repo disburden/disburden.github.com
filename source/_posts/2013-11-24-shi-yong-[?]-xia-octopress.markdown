@@ -13,7 +13,7 @@ NSIndexPath *aIndexPath=[tbv_myQuestion indexPathForCell:cell];
 NSDictionary *tmpInfo=[[dateSourece getDataAtIndex:aIndexPath.section]
 objectAtIndex:aIndexPath.row];
 
-//这里给个alertview提示用户确认一下
+//安全起见,这里给个alertview提示用户确认一下
 URBAlertView *alertView = [URBAlertView dialogWithTitle:@&quot;确定删除该谜题吗?&quot;
 subtitle:@&quot;删除之后对方已经回答的答案也会一起删除&quot;];
 alertView.blurBackground = NO;
