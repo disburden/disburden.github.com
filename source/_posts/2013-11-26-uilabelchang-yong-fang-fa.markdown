@@ -6,7 +6,7 @@ comments: true
 categories: objc
 ---
 UILabel的常用方法(强力建议用RTLable代替UILabel.支持html标注)
-```objective-c
+```objective-c code
     //创建一个label
     UILabel *fourLbl = [[UILabel alloc] initWithFrame:CGRectMake(59, 168, 184, 21)];
 
@@ -17,10 +17,10 @@ UILabel的常用方法(强力建议用RTLable代替UILabel.支持html标注)
     fourLbl.font=[UIFont systemFontOfSize:14];
 
     //设置字体的粗体和斜体
-&nbsp;&nbsp;&nbsp; fourLbl.font = [UIFont boldSystemFontOfSize:16.0f]
-&nbsp;&nbsp;&nbsp; fourLbl.font = [UIFont italicSystemFontOfSize:16.0f];
+fourLbl.font = [UIFont boldSystemFontOfSize:16.0f]
+fourLbl.font = [UIFont italicSystemFontOfSize:16.0f];
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置标签文字的颜色
+//设置标签文字的颜色
     fourLbl.textColor=[UIColor whiteColor];
 
     //设置文字阴影     
@@ -62,9 +62,9 @@ label.frame.size.height)];
 ```
 
 利用objective-c的category特性解决uilabel顶部对齐的问题
-```objective-c
+```objective-c code
 // -- file: UILabel+VerticalAlign.h
-#pragma mark VerticalAlign
+
 @interface UILabel (VerticalAlign)
 - (void)alignTop;
 - (void)alignBottom;
