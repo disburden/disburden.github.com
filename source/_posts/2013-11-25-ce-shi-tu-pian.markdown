@@ -6,7 +6,8 @@ comments: true
 categories: 
 ---
 看看发图片怎么发的
-![tu1] (/images/2013/11/1-10z.jpg)
+
+img /images/2013/11/1-10z.jpg
 
 **第二张图片**
 ![tu2] (/images/2013/11/1-2yz.jpg)
