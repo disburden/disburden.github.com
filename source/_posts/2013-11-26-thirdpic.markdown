@@ -1,0 +1,8 @@
+---
+layout: post
+title: "thirdpic"
+date: 2013-11-26 00:03:55 +0800
+comments: true
+categories: 
+---
+{% img /images/2013/11/1-10z.jpg %}
