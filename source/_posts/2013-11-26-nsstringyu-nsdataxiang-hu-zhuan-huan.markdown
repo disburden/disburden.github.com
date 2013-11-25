@@ -7,11 +7,11 @@ categories: objc
 ---
 **NSData转NSString**
 
-```objective-c   
-NSString *tmpStr;
-tmpStr=[[NSString alloc] initWithData:aNSData encoding:NSUTF8StringEncoding];
+	```objective-c   
+	NSString *tmpStr;
+empStr=[[NSString alloc] initWithData:aNSData encoding:NSUTF8StringEncoding];
 ```
- 
+<!--more--> 
 
 **NSString转NSData**
 

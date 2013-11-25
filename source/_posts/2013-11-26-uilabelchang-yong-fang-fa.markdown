@@ -6,6 +6,7 @@ comments: true
 categories: objc
 ---
 UILabel的常用方法(强力建议用RTLable代替UILabel.支持html标注)
+<!--more-->
 ```objective-c code
     //创建一个label
     UILabel *fourLbl = [[UILabel alloc] initWithFrame:CGRectMake(59, 168, 184, 21)];
