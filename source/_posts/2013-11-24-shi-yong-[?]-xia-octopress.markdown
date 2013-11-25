@@ -8,7 +8,8 @@ categories:
 感觉还不错的样子,最近好像挺流行的
 <p>代码高亮测试:</p>
 
-<pre><code>MyQuestionCell *cell=(MyQuestionCell *)sender.superview.superview;
+```objective-c test http://blog.wanggq.cn
+MyQuestionCell *cell=(MyQuestionCell *)sender.superview.superview;
 NSIndexPath *aIndexPath=[tbv_myQuestion indexPathForCell:cell];
 NSDictionary *tmpInfo=[[dateSourece getDataAtIndex:aIndexPath.section]
 objectAtIndex:aIndexPath.row];
@@ -33,5 +34,5 @@ valueForKey:@&quot;id&quot;] intValue] ablock:^{
         }
     }];
 }];
-</code></pre>
+```
 
