@@ -5,25 +5,20 @@ date: 2013-11-26 00:20:16 +0800
 comments: true
 categories: objc
 ---
-**NSData转NSString**
-
-	```objective-c   
-	NSString *tmpStr;
+NSData转NSString
+```objective-c code1   
+NSString *tmpStr;
 empStr=[[NSString alloc] initWithData:aNSData encoding:NSUTF8StringEncoding];
 ```
-<!--more--> 
 
-**NSString转NSData**
+NSString转NSData
 
-```objective-c
+``` objective-c code2
 NSData *tmpData;
 tmpData = [tmpStr dataUsingEncoding: NSASCIIStringEncoding];
 ```
 
 NSASCIIStringEncoding与NSUTF8StringEncoding都是编码,常用的还有
-
 kCFStringEncodingGBK_95
-
 kCFStringEncodingGB_2312_80
-
 kCFStringEncodingGB_18030_2000
