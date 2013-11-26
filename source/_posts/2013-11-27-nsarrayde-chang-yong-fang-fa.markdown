@@ -34,7 +34,7 @@ NSLog(@"array count:%d",[array count]);
 2013-03-05 21:26:04.835 testNSString[2556:c07] array index 2:Three
 ```  
 
-+ 4.从一个数组拷贝数据到另一数组(或者可变数组) 
++ 4.从一个数组拷贝数据到另一数组(或者可变数组)  
  ```objective-c 
     NSArray *array1 = [[NSArray alloc] init];
     NSMutableArray *MutableArray = [[NSMutableArray alloc] init];
@@ -69,7 +69,7 @@ NSLog(@"array count:%d",[array count]);
 
 + 5.从一个数组复制数据到另一数组  
 ```objective-c 
-<b>   id obj;
+    id obj;
     NSMutableArray *newArray = [[NSMutableArray alloc] init];
     NSArray *oldArray = [NSArray arrayWithObjects:
                          @"a",@"b",@"c",@"d",@"e",@"f",@"g",@"h",nil];
@@ -104,7 +104,7 @@ NSLog(@"array count:%d",[array count]);
     f,
     g,
     h
-)</b>
+)
 ```  
 
 + 6.快速枚举数组中的元素  
