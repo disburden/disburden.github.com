@@ -13,11 +13,11 @@ categories: objc
 {% img /images/2013/11/sb1.png %}
 <!--more-->
 3.创建成功之后将在xcode左边的项目目录树中看到新创建的settings bundle,其中的root.plist就是我们存储信
-息的文件
-{% img /images/2013/11/sb2.png %}
+息的文件  
+{% img /images/2013/11/sb2.png %}  
 4.在root.plist中默认会创建一些不同类型的值.可以根据需要参考默认的一些设置,自行添加修改内容(最顶上面
-始终显示的是iphone settings schema,ipad的应用也一样,没影响)
-{% img /images/2013/11/sb3.png %}
+始终显示的是iphone settings schema,ipad的应用也一样,没影响)  
+{% img /images/2013/11/sb3.png %}  
 注意:
 
 1.在图中我们可以看到,可以为自己添加的参数设置默认值.Default Value,这个值其实只是在"设置"中显示用的,
