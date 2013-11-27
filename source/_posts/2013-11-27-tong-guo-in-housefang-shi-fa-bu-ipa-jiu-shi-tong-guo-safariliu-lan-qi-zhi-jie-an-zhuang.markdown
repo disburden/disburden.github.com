@@ -7,7 +7,7 @@ categories: objc
 ---
 1.首先要将你的项目进行打包  
 {% img /images/2013/11/ihi1.png %}  
-  
+<!--more-->  
 2.在弹出的窗口中选择Distribute..  
 {% img /images/2013/11/ihi2.png %}  
 
