@@ -16,6 +16,8 @@ CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].siz
 \#define SCREEN\_WIDTH ([UIScreen mainScreen].bounds.size.width)
 \#define SCREEN\_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 
+<!--more-->
+
 4.获取系统的版本号    
 \#define CurrentSystemVersion ([[UIDevice currentDevice] systemVersion]) 
 
@@ -32,10 +34,10 @@ CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].siz
 \#endif
 
 7.判断是否用arc  
-\#if __has_feature(objc_arc)
-    //compiling with ARC
+\#if \_\_has\_feature(objc\_arc)
+//compiling with ARC
 \#else
-    // compiling without ARC
+// compiling without ARC
 \#endif
 
 8.默认配置保存  
