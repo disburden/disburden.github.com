@@ -11,7 +11,7 @@ Objective-C做为ANSI C的扩展，使用C标准库头文件<math.h>中定义的
 的信息还是需要去查阅<math.h>头文件。
 <!--more-->
 
-```Objective-c 
+```objective-c 
 //数学常量：
 #define M\_E         2.71828182845904523536028747135266250   // e
 #define M\_LOG2E     1.44269504088896340735992468100189214   // log 2e
