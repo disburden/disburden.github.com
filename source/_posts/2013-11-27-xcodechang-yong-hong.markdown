@@ -6,30 +6,30 @@ comments: true
 categories: objc
 ---
 1.判断是否为iphone5  
-#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ?
+\#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ?
 CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
 2.判断是否为ipad  
-#define isPad (UI\_USER\_INTERFACE\_IDIOM() == UIUserInterfaceIdiomPad)
+\#define isPad (UI\_USER\_INTERFACE\_IDIOM() == UIUserInterfaceIdiomPad)
 
 3.屏幕的长和宽  
-#define SCREEN\_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN\_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+\#define SCREEN\_WIDTH ([UIScreen mainScreen].bounds.size.width)
+\#define SCREEN\_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 
 4.获取系统的版本号    
-#define CurrentSystemVersion ([[UIDevice currentDevice] systemVersion]) 
+\#define CurrentSystemVersion ([[UIDevice currentDevice] systemVersion]) 
 
 5.获取语言  
-#define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
+\#define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
 
 6.判断是iphone还是模拟器  
-#if TARGET\_OS\_IPHONE
+\#if TARGET\_OS\_IPHONE
 //iPhone Device
-#endif
+\#endif
  
-#if TARGET\_IPHONE\_SIMULATOR
+\#if TARGET\_IPHONE\_SIMULATOR
 //iPhone Simulator
-#endif
+\#endif
 
 7.判断是否用arc  
 \#if __has_feature(objc_arc)
