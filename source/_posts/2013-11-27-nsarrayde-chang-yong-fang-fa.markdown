@@ -24,7 +24,7 @@ NSLog(@"array count:%d",[array count]);
 <!--more-->
 
 + 3.获取指定索引处的对象  
-```objective-c 
+```objective-c  
     NSArray *array = [[NSArray alloc] initWithObjects:@"One",@"Two",@"Three",@"Four",nil];
 
     NSLog(@"array index 2:%@",[array objectAtIndex:2]);
@@ -35,7 +35,7 @@ NSLog(@"array count:%d",[array count]);
 ```  
 
 + 4.从一个数组拷贝数据到另一数组(或者可变数组)  
- ```objective-c 
+```objective-c  
     NSArray *array1 = [[NSArray alloc] init];
     NSMutableArray *MutableArray = [[NSMutableArray alloc] init];
     NSArray *array = [NSArray arrayWithObjects:
@@ -51,20 +51,20 @@ NSLog(@"array count:%d",[array count]);
 =====
 
 2013-03-05 21:29:17.021 testNSString[2616:c07] array:(
-    a,
-    b,
-    c
-)
+a,
+b,
+c
+)  
 2013-03-05 21:29:17.023 testNSString[2616:c07] MutableArray:(
-    a,
-    b,
-    c
-)
+a,
+b,
+c
+)  
 2013-03-05 21:29:17.023 testNSString[2616:c07] array1:(
-    a,
-    b,
-    c
-)
+a,
+b,
+c
+)  
 ```  
 
 + 5.从一个数组复制数据到另一数组  
@@ -86,24 +86,24 @@ NSLog(@"array count:%d",[array count]);
 =====
 
 2013-03-05 21:32:32.584 testNSString[2664:c07] oldArray:(
-    a,
-    b,
-    c,
-    d,
-    e,
-    f,
-    g,
-    h
+a,
+b,
+c,
+d,
+e,
+f,
+g,
+h
 )
 2013-03-05 21:32:32.586 testNSString[2664:c07] newArray:(
-    a,
-    b,
-    c,
-    d,
-    e,
-    f,
-    g,
-    h
+a,
+b,
+c,
+d,
+e,
+f,
+g,
+h
 )
 ```  
 
@@ -121,23 +121,23 @@ NSLog(@"array count:%d",[array count]);
 =====
 
 2013-03-05 21:34:56.611 testNSString[2719:c07] oldArray:(
-    a,
-    b,
-    c,
-    d,
-    e,
-    f,
-    g,
-    h
+a,
+b,
+c,
+d,
+e,
+f,
+g,
+h
 )
-2013-03-05 21:34:56.612 testNSString[2719:c07] a
-2013-03-05 21:34:56.613 testNSString[2719:c07] b
-2013-03-05 21:34:56.613 testNSString[2719:c07] c
-2013-03-05 21:34:56.614 testNSString[2719:c07] d
-2013-03-05 21:34:56.614 testNSString[2719:c07] e
-2013-03-05 21:34:56.615 testNSString[2719:c07] f
-2013-03-05 21:34:56.615 testNSString[2719:c07] g
-2013-03-05 21:34:56.616 testNSString[2719:c07] h
+2013-03-05 21:34:56.612 testNSString[2719:c07] a  
+2013-03-05 21:34:56.613 testNSString[2719:c07] b  
+2013-03-05 21:34:56.613 testNSString[2719:c07] c  
+2013-03-05 21:34:56.614 testNSString[2719:c07] d  
+2013-03-05 21:34:56.614 testNSString[2719:c07] e  
+2013-03-05 21:34:56.615 testNSString[2719:c07] f  
+2013-03-05 21:34:56.615 testNSString[2719:c07] g  
+2013-03-05 21:34:56.616 testNSString[2719:c07] h  
 ```  
 
 + 7.数组的深度拷贝(deep copy)  
@@ -152,24 +152,24 @@ NSLog(@"array count:%d",[array count]);
 =====
 
 2013-03-05 21:37:06.342 testNSString[2753:c07] oldArray:(
-    a,
-    b,
-    c,
-    d,
-    e,
-    f,
-    g,
-    h
+a,
+b,
+c,
+d,
+e,
+f,
+g,
+h
 )
 2013-03-05 21:37:06.344 testNSString[2753:c07] newArray:(
-    a,
-    b,
-    c,
-    d,
-    e,
-    f,
-    g,
-    h
+a,
+b,
+c,
+d,
+e,
+f,
+g,
+h
 )
 ```  
 
@@ -189,14 +189,14 @@ NSLog(@"array count:%d",[array count]);
 =====
 
 2013-03-05 21:40:00.890 testNSString[2804:c07] oldArray:(
-    b,
-    a,
-    e,
-    d,
-    c,
-    f,
-    h,
-    g
+b,
+a,
+e,
+d,
+c,
+f,
+h,
+g
 )
 2013-03-05 21:40:00.891 testNSString[2804:c07] b
 2013-03-05 21:40:00.892 testNSString[2804:c07] a
@@ -219,11 +219,11 @@ NSLog(@"array count:%d",[array count]);
 
 2013-03-05 21:41:34.496 testNSString[2833:c07] string:One,Two,Three,Four
 2013-03-05 21:41:34.497 testNSString[2833:c07] array:(
-    One,
-    Two,
-    Three,
-    Four
-)
+One,
+Two,
+Three,
+Four
+)  
 ```  
 
 + 10.将数组元素合并到一个字符串中
