@@ -67,9 +67,7 @@ style="color:orange; font-size:24px">
 
 </html>
 ```
-#注意:其中的链接地址可以自己修改成你的plist文件存放的位置,但一定是
-itms-services://?action=download-manifest打头再加上plist文件的url地址的格式,itms-services:这个是特殊
-的http协议,目前只有safari浏览器支持(只要是支持这个协议的浏览器应该都能下载安装吧)
+###注意:其中的链接地址可以自己修改成你的plist文件存放的位置,但一定是itms-services://?action=download-manifest打头再加上plist文件的url地址的格式,itms-services:这个是特殊的http协议,目前只有safari浏览器支持(只要是支持这个协议的浏览器应该都能下载安装吧)
 {% img /images/2013/11/ihi7.png %}  
 
 
