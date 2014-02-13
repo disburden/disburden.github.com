@@ -98,7 +98,8 @@ NSLog(@"string:%@",string);
 2013-05-16 17:13:00.184 justTest[3155:c07] string:One
 2013-05-16 17:13:00.185 justTest[3155:c07] string:Two
 2013-05-16 17:13:00.185 justTest[3155:c07] string:Three
- ```
+```  
+
 ### 7.排序方法一,如果全是int类型的可以用自带的方法直接排序
 ```objective-c
     NSMutableArray *array = [[NSMutableArray alloc]init];
@@ -169,7 +170,7 @@ array=[[NSMutableArray alloc] initWithCapacity:11];
     for (int i=0; i<[sortedArray1 count]; i++) {
         NSLog(@"%@",[[sortedArray1 objectAtIndex:i] objectForKey:@"FriendName"]);
     }
- ```
+```  
 
 ### 9.在指定位置插入对象
 ```objective-c
