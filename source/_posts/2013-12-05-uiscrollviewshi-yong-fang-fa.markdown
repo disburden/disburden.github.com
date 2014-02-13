@@ -69,7 +69,7 @@ decelerationRate
 maximumZoomScale  
 一个浮点数，表示能放最大的倍数  
 
-minimumZoomScale  
+minimumZoomScale  
 一个浮点数，表示能缩最小的倍数  
 
 delaysContentTouches  
