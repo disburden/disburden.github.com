@@ -38,3 +38,9 @@ Thread 0 Crashed:
 dwarfdump –lookup 0x000036d2 –arch armv6 MyApp.app.dSYM
 输出信息如下：
 {% img /images/2014/01/08341385206089.jpg %}
+
+### 6.nm,strings,otool
+这三个工具的用发都是一样的,先将应用打包成ipa文件,比如现在有个app叫做abc,打包成abc.ipa后,将期解压出
+来,然后进入abc.app目录执行nm abc就可以了,strings也是一样的执行方式,otool要造加参数ov(otool -ov abc)
+
+这三个命令的主要作用就是列出app所有调用到的函数,具体的区别在哪还没去研究
