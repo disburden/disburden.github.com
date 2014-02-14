@@ -21,7 +21,7 @@ initWithObjectsAndKeys:@"One",@"1",@"Two",@"2",@"Three",@"3",nil];
     3 = Three;
 }
 ```  
-
+<!--more-->
 ### 2.创建可变字典并添加记录
 ```objective-c
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
