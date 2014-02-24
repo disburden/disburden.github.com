@@ -20,8 +20,6 @@ categories: objc
     BOOL isCameraSupport = [UIImagePickerController
 isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
     NSLog(@"support camera:%d",isCameraSupport);
-    
-<!--more-->
 
     //UIImagePickerController静态方法判断设备是否支持前置摄像头／后置摄像头
     /*
@@ -77,6 +75,8 @@ isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
         NSLog(@"media types:%@",type);
     }
 ```  
+<!--more-->
+
 ### 2.UIImagePickerController属性详解：
 ```objective-c  
     //指定使用照相机模式,可以指定使用相册／照片库
@@ -113,17 +113,17 @@ isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
 }
 ```  
 使用 imagepicker.cameraViewTransform = CGAffineTransformMakeRotation(M_PI*45/180);旋转45度的效果：
-{% img /images/2014/02/camera1.jpg %}
+{% img /images/2014/02/camer1.jpg %}
 
 使用imagepicker.cameraViewTransform = CGAffineTransformMakeScale(1.5, 1.5);全屏的效果，同时
 imagepicker.showsCameraControls  =NO;隐藏工具栏：
-{% img /images/2014/02/camera2.jpg %}
+{% img /images/2014/02/camer2.jpg %}
 
 使用imagepicker.allowsEditing = YES;出现的图片编辑效果，只有当imagepicker.showsCameraControls  = YES;才有效果：
-{% img /images/2014/02/camera3.jpg %}
+{% img /images/2014/02/camer3.jpg %}
 
 使用 imagepicker.mediaTypes = @[(NSString*)kUTTypeImage,(NSString*)kUTTypeMovie];支持拍照和视频的前后对比效果：
-{% img /images/2014/02/camera4.jpg %}{% img /images/2014/02/camera5.jpg %}  
+{% img /images/2014/02/camer4.jpg %}{% img /images/2014/02/camer5.jpg %}  
 
 
 ### 3.UIImagePickerController回调详解：
@@ -193,7 +193,7 @@ action:@selector(savePhoto)];
     [imagepicker takePicture];
 }
 ```  
-{% img /images/2014/02/camera6.jpg %}
+{% img /images/2014/02/camer6.jpg %}
 
 
 
