@@ -86,7 +86,7 @@ Libraries里面都没有任何内容. 编译设置也是完全原始的状态.
 那么生成出的product.app内的info.plist就直接是文本样式的了.  
 
 
-    另 外, 向Copy Bundle Resources, Compile Sources, Link Binary With Libraries内添加/删除文件, 可以
+  另外, 向Copy Bundle Resources, Compile Sources, Link Binary With Libraries内添加/删除文件, 可以
 在要改动的文件上, 选择get info, 并且切换到Target页, 勾选要引用这个文件的target即可. 比如icon.png可以
 指定给默认target, 而icon\_lite.png指定给lite verion的target  
  
