@@ -6,7 +6,7 @@ comments: true
 categories: objc
 ---
 
-### 1.一个手指，拍击两次手势  
+### 1.一个手指，拍击两次手势(可以是任意次数)    
 ```objective-c
 // 创建一个手势识别器
 UITapGestureRecognizer *oneFingerTwoTaps =
@@ -121,5 +121,10 @@ UITapGestureRecognizer* doubleRecognizer;
 UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(forgotSwipeRight)];
 swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
 [self.view addGestureRecognizer:swipeRight];
+```  
+### 9.拖动  
+```objective-c
+UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
+action:@selector(handlePan:)];
 ```  
 
