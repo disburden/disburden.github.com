@@ -104,8 +104,8 @@ autorelease];
 ```objective-c
 UITapGestureRecognizer* singleRecognizer;
     singleRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:selfaction:@selector(handleSingleTapFrom)];
-    singleTapRecognizer.numberOfTapsRequired = 1; // 单击
-    [self.view addGestureRecognizer:singleRecognizer];
+    singleRecognizer.numberOfTapsRequired = 1; // 单击
+    [self.view addGestureRecognizer: singleRecognizer];
 ```  
 
 ### 7.双击手势  
