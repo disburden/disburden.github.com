@@ -103,7 +103,7 @@ autorelease];
 ### 6.单击手势  
 ```objective-c
 UITapGestureRecognizer* singleRecognizer;
-    singleRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:selfaction:@selector(handleSingleTapFrom)];
+    singleRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTapFrom)];
     singleRecognizer.numberOfTapsRequired = 1; // 单击
     [self.view addGestureRecognizer: singleRecognizer];
 ```  
@@ -111,7 +111,7 @@ UITapGestureRecognizer* singleRecognizer;
 ### 7.双击手势  
 ```objective-c
 UITapGestureRecognizer* doubleRecognizer;
-    doubleRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:selfaction:@selector(handleDoubleTapFrom)];
+    doubleRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapFrom)];
     doubleTapRecognizer.numberOfTapsRequired = 2; // 双击
     [self.view addGestureRecognizer:doubleRecognizer];
 ```  
