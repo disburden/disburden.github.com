@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ios开发选择系列-6:用storyboard还是用xib或者代码写ui | 月夜录</title>
+  <meta name="author" content="Disburden">
+  
+  <meta name="description" content="自从苹果公司发布了iphone6,iphone6 plus以及apple watch后,苹果的开发人员也不得不面对适配不同分辨率的问题了,从前纯代码写ui的是不是到了死路一条的地步呢?究竟哪种方式做ui比较合适?成了许多人不得不面对的问题了,目前主流做ui的方式就是3种,storyboard,xib和纯代码,这3种方式我都粗浅的用过,我就简单的说说自己的个人感受">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="ios开发选择系列-6:用storyboard还是用xib或者代码写ui"/>
+  <meta property="og:site_name" content="月夜录"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="月夜录" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">月夜录</a></h1>
+  <h2><a href="/">凄风苦雨夜归人</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-05-29T15:08:47.000Z"><a href="/2015/05/29/ios开发选择系列6-用storyboard还是用xib或者代码写ui/">May 29 2015</a></time>
+      
+      
+  
+    <h1 class="title">ios开发选择系列-6:用storyboard还是用xib或者代码写ui</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>  自从苹果公司发布了iphone6,iphone6 plus以及apple watch后,苹果的开发人员也不得不面对适配不同分辨率的问题了,从前纯代码写ui的是不是到了死路一条的地步呢?究竟哪种方式做ui比较合适?成了许多人不得不面对的问题了,目前主流做ui的方式就是3种,storyboard,xib和纯代码,这3种方式我都粗浅的用过,我就简单的说说自己的个人感受</p>
+<a id="more"></a>
+<h3 id="1-storyboard"><a href="#1-storyboard" class="headerlink" title="1.storyboard"></a>1.storyboard</h3><p>用storyboard的好处很明显,各个vc之间的关系一目了然,而且可以通过监视面板直接设置许多视图的外观以及属性,还可以通过添加keypath对运行时的一些状态做设置,如果屏幕够大,还可以通过preview实时查看各个尺寸下约束展现的效果.<br>但是,storyboard有个非常大的问题,就是vc多的时候,每当storyboard有改动,编译一次就要用非常长的时间,简直无法忍受,更吐血的是,只要你点开storyboard,不管你有没做修改,xcode就认为你有改动,编译的时候就会耗用很长的时间,我估计storyboard这个问题没有解决好的话,很难成为主流的ui设计工具,不过如果只是简单的几个视图跳转,用storyboard出原型那是神速啊.storyboard另外一个比较大的问题就是多人协作的问题.目前还没有什么好的解决办法(有人建议创建多个storyboard文件,那和xib没什么区别了).</p>
+<h3 id="2-xib"><a href="#2-xib" class="headerlink" title="2.xib"></a>2.xib</h3><p>xib是个元老级的产品,在各个方面相对会比较成熟一点,storyboard可以简单理解为多个xib集合在一起,同样xib可以看做storyboard分解后的单个vc(storyboard是以vc为单位,xib不一定).xib没有了storyboard中文件变大造成编译速度慢的问题,同时也失去全局观察各个vc之间关系的功能.</p>
+<h3 id="3-纯代码"><a href="#3-纯代码" class="headerlink" title="3.纯代码"></a>3.纯代码</h3><p>网络上很多言论说纯代码写ui已经走到尽头了,这个说法有一点片面,其实用代码创建视图,设置外观,属性等工作用纯代码没有任何问题,和以前一样.唯一的问题就是布局,新尺寸的设备出来后为了适应不同大小的屏幕,不得不采用autolayout自动布局的方案,而sdk自带api来做约束相当的繁琐,虽然他有出了一个简单的布局语法,但是对不了解的人简直就是天书,所以只要能够解决objc自带的约束api繁琐的问题,纯代码写ui对那些键盘控来说还是很有市场的.幸运的是万能的github上已经出现了几个非常优秀的实现自动布局的框架,我目前用masonry,相当不错,所以纯代码写ui加上用第三方类库做布局,基本上和以前没有什么区别,一样可行.</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>在storyboard没有解决好编译耗时长的问题之前,较大的项目还是先不要用了,不过种种迹象表明苹果公司会往这个方向继续发展,所以静观其变.当然了,出于学习的目的和项目的ui比较轻量的情况,storyboard不失为一个好选择</p>
+<p>目前比较推荐的是xib,在快速出界面以及ui微调等方面都非常得心应手</p>
+<p>纯代码的一大缺点就是速度较慢,创建ui的过程索然无味.而且对于创建的效果必须编译执行后才能查看,当然了某些geek还是非常推崇这种方式的,那就要看个人了,总之新设备出来之后代码写ui还是能继续生存下去的,不像坊间说的那么危言耸听.</p>
+<p>最终对于我个人的结论就是:在现阶段以xib为主,代码为辅是最为合适的一种选择.</p>
+<h3 id="原创文章-转载请注明出处-谢谢"><a href="#原创文章-转载请注明出处-谢谢" class="headerlink" title="原创文章,转载请注明出处,谢谢!"></a>原创文章,转载请注明出处,谢谢!</h3>
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/objc/">objc</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/原创/">原创</a>, <a href="/tags/ios开发选择系列/">ios开发选择系列</a>, <a href="/tags/storyboard/">storyboard</a>, <a href="/tags/xib/">xib</a>, <a href="/tags/纯代码/">纯代码</a>, <a href="/tags/ui/">ui</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://blog.wgq.name/2015/05/29/ios开发选择系列6-用storyboard还是用xib或者代码写ui/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:blog.wgq.name">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/objc/">objc</a><small>17</small></li>
+  
+    <li><a href="/categories/杂/">杂</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/CGRect/">CGRect</a><small>1</small></li>
+  
+    <li><a href="/tags/In-house/">In house</a><small>1</small></li>
+  
+    <li><a href="/tags/NSUserDefaults/">NSUserDefaults</a><small>1</small></li>
+  
+    <li><a href="/tags/Targets/">Targets</a><small>1</small></li>
+  
+    <li><a href="/tags/UINavigationViewController/">UINavigationViewController</a><small>1</small></li>
+  
+    <li><a href="/tags/UITableView/">UITableView</a><small>1</small></li>
+  
+    <li><a href="/tags/UIView/">UIView</a><small>1</small></li>
+  
+    <li><a href="/tags/XCode/">XCode</a><small>1</small></li>
+  
+    <li><a href="/tags/block/">block</a><small>1</small></li>
+  
+    <li><a href="/tags/bundel/">bundel</a><small>1</small></li>
+  
+    <li><a href="/tags/category/">category</a><small>1</small></li>
+  
+    <li><a href="/tags/class/">class</a><small>1</small></li>
+  
+    <li><a href="/tags/footer/">footer</a><small>1</small></li>
+  
+    <li><a href="/tags/header/">header</a><small>1</small></li>
+  
+    <li><a href="/tags/ios/">ios</a><small>1</small></li>
+  
+    <li><a href="/tags/ios开发选择系列/">ios开发选择系列</a><small>7</small></li>
+  
+    <li><a href="/tags/ipa/">ipa</a><small>1</small></li>
+  
+    <li><a href="/tags/kvo/">kvo</a><small>1</small></li>
+  
+    <li><a href="/tags/safari/">safari</a><small>1</small></li>
+  
+    <li><a href="/tags/section/">section</a><small>1</small></li>
+  
+    <li><a href="/tags/storyboard/">storyboard</a><small>1</small></li>
+  
+    <li><a href="/tags/ui/">ui</a><small>1</small></li>
+  
+    <li><a href="/tags/xcode/">xcode</a><small>2</small></li>
+  
+    <li><a href="/tags/xib/">xib</a><small>1</small></li>
+  
+    <li><a href="/tags/代理/">代理</a><small>2</small></li>
+  
+    <li><a href="/tags/位置/">位置</a><small>1</small></li>
+  
+    <li><a href="/tags/使用/">使用</a><small>2</small></li>
+  
+    <li><a href="/tags/关系/">关系</a><small>1</small></li>
+  
+    <li><a href="/tags/判断/">判断</a><small>1</small></li>
+  
+    <li><a href="/tags/加载图片/">加载图片</a><small>1</small></li>
+  
+    <li><a href="/tags/动画/">动画</a><small>1</small></li>
+  
+    <li><a href="/tags/协议/">协议</a><small>2</small></li>
+  
+    <li><a href="/tags/原创/">原创</a><small>16</small></li>
+  
+    <li><a href="/tags/参数/">参数</a><small>1</small></li>
+  
+    <li><a href="/tags/发布/">发布</a><small>1</small></li>
+  
+    <li><a href="/tags/变量/">变量</a><small>1</small></li>
+  
+    <li><a href="/tags/命令/">命令</a><small>1</small></li>
+  
+    <li><a href="/tags/委托/">委托</a><small>2</small></li>
+  
+    <li><a href="/tags/安装/">安装</a><small>1</small></li>
+  
+    <li><a href="/tags/宏/">宏</a><small>1</small></li>
+  
+    <li><a href="/tags/常用/">常用</a><small>1</small></li>
+  
+    <li><a href="/tags/常量/">常量</a><small>1</small></li>
+  
+    <li><a href="/tags/开发者证书/">开发者证书</a><small>1</small></li>
+  
+    <li><a href="/tags/循环引用/">循环引用</a><small>1</small></li>
+  
+    <li><a href="/tags/扩展/">扩展</a><small>1</small></li>
+  
+    <li><a href="/tags/教程/">教程</a><small>1</small></li>
+  
+    <li><a href="/tags/数学/">数学</a><small>1</small></li>
+  
+    <li><a href="/tags/方法/">方法</a><small>2</small></li>
+  
+    <li><a href="/tags/浏览器/">浏览器</a><small>1</small></li>
+  
+    <li><a href="/tags/类/">类</a><small>1</small></li>
+  
+    <li><a href="/tags/类别/">类别</a><small>1</small></li>
+  
+    <li><a href="/tags/纯代码/">纯代码</a><small>1</small></li>
+  
+    <li><a href="/tags/继承/">继承</a><small>1</small></li>
+  
+    <li><a href="/tags/苹果/">苹果</a><small>1</small></li>
+  
+    <li><a href="/tags/视图/">视图</a><small>1</small></li>
+  
+    <li><a href="/tags/访问/">访问</a><small>1</small></li>
+  
+    <li><a href="/tags/转场/">转场</a><small>1</small></li>
+  
+    <li><a href="/tags/选择/">选择</a><small>1</small></li>
+  
+    <li><a href="/tags/通知中心/">通知中心</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2017 Disburden
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
